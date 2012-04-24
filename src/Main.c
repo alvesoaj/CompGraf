@@ -6,6 +6,7 @@
  */
 #include <GL/glut.h> // inclusão da biblioteca
 #include <stdlib.h> // inclusão da biblioteca
+
 // Declarações
 void init(void);
 void display(void);
@@ -28,22 +29,20 @@ void init(void) {
 	glOrtho(0, 256, 0, 256, -1, 1); // Seleciona o modo de projeção Ortogonal.
 }
 void display(void) {
-	int i;
 	glClear(GL_COLOR_BUFFER_BIT);
 	//Limpa toda a Janela para a cor do comando glClearColor
 	glColor3f(0.0, 0.0, 0.0); // Seleciona a cor preta para a linha
 	glBegin(GL_LINES);
-	glVertex2i(20, 100); // Fornece as coordenadas dos pontos iniciais e finais
-	glVertex2i(100, 20); // Fornece as coordenadas dos pontos iniciais e finais
+	glVertex2i(20, 100); // Fornece as coordenadas dos pontos iniciais
+	glVertex2i(100, 20); // Fornece as coordenadas dos pontos finais
 	glEnd();
 	glFlush(); // Este comando permite a execução em ambiente de rede
 }
-
 // A rotina a seguir termina o programa com a tecla Esc
 void keyboard(unsigned char key, int x, int y) {
 	switch (key) {
-	case 27:
-		exit(0);
-		break;
+		case 27:
+			exit(0);
+			break;
 	}
 }
