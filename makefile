@@ -4,7 +4,7 @@ OBJS =			src/Main.c
 
 INCLUDES =		
 
-LIBS =			-lGLU -lGL -lglut -lXxf86vm
+LIBS =			-lGLU -lGL -lglut
 
 LIB_FOLDERS = 	
 
